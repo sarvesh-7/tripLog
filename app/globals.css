@@ -22,5 +22,41 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #282c34;
+  color: #ddd8d8;
+}
+
+html {
+  font-family: 'Quicksand', sans-serif;
+}
+
+@layer components {
+
+  .link:hover,
+  .active:hover {
+    text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
+    @apply text-[#f9b331];
+  }
+
+  .active {
+    @apply text-[#f9b331];
+  }
+}
+
+@layer base {
+  button {
+    @apply text-black bg-[#b3b9c6] rounded-sm p-1 cursor-pointer my-1;
+  }
+
+  input {
+    @apply bg-[#1c2027] p-1 block mt-3 mb-3 w-full;
+  }
+
+  textarea {
+    @apply bg-[#1c2027] p-1 block mt-3 mb-3 w-full;
+  }
+
+  label {
+    @apply uppercase;
+  }
 }
