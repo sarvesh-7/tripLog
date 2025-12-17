@@ -8,7 +8,7 @@ function page() {
     return (
         <div className='flex flex-col w-[90%] gap-20 m-auto justify-center items-center mt-10 text-center'>
             <header className='flex flex-col gap-6 m-auto'>
-                <h1 className='text-6xl font-bold'>
+                <h1 className='text-3xl sm:text-5xl font-bold'>
                     One shared passion: 
                 </h1>
                 <p>
@@ -16,10 +16,10 @@ function page() {
                 </p>
             </header>
             <main className='flex flex-col gap-10 m-auto text-center items-center'>
-                <h2 className='text-4xl font-bold'>
+                <h2 className='text-2xl sm:text-4xl font-bold'>
                     Community Perks
                 </h2>
-                <ul className='flex flex-col gap-6 text-2xl'>
+                <ul className='flex flex-col gap-6 sm:text-2xl'>
                     <li>
                         <Image className='w-[8rem] h-[8rem] m-auto mb-4' src={community1} alt="Share & discover trips icon"/>
                         <p>Share & Discover Trips</p>
