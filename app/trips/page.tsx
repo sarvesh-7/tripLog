@@ -4,6 +4,11 @@ import { fetchTripDetails } from '@/lib/trips';
 import { Trip } from '@/lib/models/trip';
 import TripsGrid from '@/components/Trip/TripsGrid';
 
+export const metadata = {
+    title : "All Trips",
+    description: "Browse trips as per your requirement"
+}
+
 async function TripsData() {
     const tripsData = await fetchTripDetails();
     if (!tripsData) return <h1>Not found</h1>

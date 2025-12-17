@@ -10,6 +10,19 @@ type PageProps = {
     }
 }
 
+export async function generateMetadata({ params }: PageProps) {
+    const { tripId } = await params;
+    if (!tripId || !mongoose.isValidObjectId(tripId)) return notFound(); // Next.js helper
+    const tripData = await fetchTripById(tripId);
+    if (!tripData) {
+        notFound();
+    }
+    return {
+        title: tripData.title,
+        description: tripData.summary
+    }
+}
+
 async function TripDetailsPage({ params }: PageProps) {
 
     const { tripId } = await params;
